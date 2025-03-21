@@ -5,4 +5,6 @@ public interface Item {
     int getSale();
     int getBid();
     int getAsk();
+
+    void add(Bid Offer);
 }
