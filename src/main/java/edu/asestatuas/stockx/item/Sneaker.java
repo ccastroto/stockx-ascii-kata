@@ -50,6 +50,9 @@ public class Sneaker implements Item {
     public void add(Bid Offer){
 
     }
+    @Override
+    public void add(Ask Offer){}
+
 
     private List<Offer> offers = new ArrayList<Offer>();
 

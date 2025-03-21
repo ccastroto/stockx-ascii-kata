@@ -7,4 +7,5 @@ public interface Item {
     int getAsk();
 
     void add(Bid Offer);
+    void add(Ask Offer);
 }
