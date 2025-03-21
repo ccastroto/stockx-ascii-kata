@@ -1,6 +1,7 @@
 package edu.asestatuas.stockx;
 
 import edu.asestatuas.stockx.item.*;
+import edu.asestatuas.stockx.criteria.*;
 
 
 public class Stockx {
@@ -24,6 +25,9 @@ public class Stockx {
         sneaker.add(new Ask("9.5", 340));
         sneaker.add(new Ask("13", 330));
 
+        Criteria bids = new Bids();
+        System.out.println("\n\t\t All BIDS");
+        bids.checkCriteria(sneaker).forEach(System.out::print);
     }
 
     public static String draw(Item sneaker) {
