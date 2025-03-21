@@ -1,5 +1,7 @@
 package edu.asestatuas.stockx.item;
 
+import edu.asestatuas.stockx.criteria.Criteria;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,6 +12,8 @@ public class Sneaker implements Item {
     private int ask;
     private int bid;
     private String style;
+    private Offer offer[];
+    List<Offer> offers = new ArrayList<Offer>();
 
     public Sneaker(String id, String sneaker) {
         this.name = sneaker;
@@ -46,12 +50,11 @@ public class Sneaker implements Item {
     void setBid(int bid){
         this.bid = bid;
     }
-    @Override
-    public void add(Bid Offer){
 
+    public void add(Offer offer){
+        offers.add(offer);
     }
-    @Override
-    public void add(Ask Offer){}
+
 
 
     private List<Offer> offers = new ArrayList<Offer>();

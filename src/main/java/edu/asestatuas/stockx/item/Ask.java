@@ -1,6 +1,6 @@
 package edu.asestatuas.stockx.item;
 
-public class Ask {
+public class Ask implements Offer{
 
     private  String size;
     private Integer ask;
@@ -9,6 +9,11 @@ public class Ask {
         this.size = size;
         this.ask = ask;
     }
+
+    public int value() {
+        return this.ask;
+    }
+
     public String size(){
         return this.size;
     }

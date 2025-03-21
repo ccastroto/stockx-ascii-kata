@@ -1,6 +1,6 @@
 package edu.asestatuas.stockx.item;
 
-public class Bid {
+public class Bid implements Offer{
 
     private  String size;
     private Integer bid;
