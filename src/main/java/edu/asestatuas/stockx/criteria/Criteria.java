@@ -7,5 +7,5 @@ import java.util.ArrayList;
 import java.util.List;
 
 public interface Criteria {
-    List<Offer> checkCriteria = new ArrayList<Criteria>(Item);
+    List<Offer> checkCriteria(Item item);
 }

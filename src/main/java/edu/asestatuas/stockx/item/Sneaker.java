@@ -12,8 +12,7 @@ public class Sneaker implements Item {
     private int ask;
     private int bid;
     private String style;
-    private Offer offer[];
-    List<Offer> offers = new ArrayList<Offer>();
+    private List<Offer> offers = new ArrayList<Offer>();
 
     public Sneaker(String id, String sneaker) {
         this.name = sneaker;
@@ -52,12 +51,14 @@ public class Sneaker implements Item {
     }
 
     public void add(Offer offer){
-        offers.add(offer);
+        this.offers.add(offer);
     }
 
 
 
-    private List<Offer> offers = new ArrayList<Offer>();
+    public List<Offer> offers() {
+        return this.offers;
+    }
 
     public String toString() {
         return this.name
