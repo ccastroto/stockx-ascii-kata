@@ -12,12 +12,19 @@ import java.util.stream.Collectors;
 public class Bids implements Criteria {
 
     public Bids(){}
-    public List<Offer> checkCriteria(Item item) {
+    /*public List<Offer> checkCriteria(Item item) {
         List<Offer> list = item.offers()
                 .stream()
                 .filter(o -> o instanceof Bid)
                 .collect(Collectors.toList());
     return list;
-    }
+    }*/
 
+    @Override
+    public List<Offer> checkCriteria(Item sneaker) {
+        return sneaker.offers()
+                .stream()
+                .filter(o -> o instanceof Bid)
+                .collect(Collectors.toList());
+    }
 }
