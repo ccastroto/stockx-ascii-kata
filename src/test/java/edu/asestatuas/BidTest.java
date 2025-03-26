@@ -25,4 +25,11 @@ public class BidTest {
         assertNotNull(bid.toString());
     }
 
+    @Test
+    public void constructorTest() {
+        Bid bid = new Bid("9.5", 282);
+        assertEquals(282, bid.value());
+        assertEquals("9.5", bid.size());
+    }
+
 }
