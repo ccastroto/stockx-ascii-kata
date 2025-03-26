@@ -9,8 +9,6 @@ import java.util.stream.Collectors;
 
 public class Asks implements Criteria{
 
-    public Asks(){}
-
     @Override
     public List<Offer> checkCriteria(Item sneaker) {
         return sneaker.offers()
