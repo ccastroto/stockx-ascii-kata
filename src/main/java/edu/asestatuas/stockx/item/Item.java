@@ -11,4 +11,5 @@ public interface Item {
     void add(Offer offer);
     List<Offer> offers();
 
+    void setBid(int bid);
 }
