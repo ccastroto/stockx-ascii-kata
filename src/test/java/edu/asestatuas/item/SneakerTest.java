@@ -1,4 +1,4 @@
-package edu.asestatuas;
+package edu.asestatuas.item;
 
 import edu.asestatuas.stockx.item.*;
 import org.junit.Test;
