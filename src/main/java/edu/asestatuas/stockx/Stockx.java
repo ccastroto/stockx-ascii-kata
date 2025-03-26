@@ -2,6 +2,7 @@ package edu.asestatuas.stockx;
 
 import edu.asestatuas.stockx.item.*;
 import edu.asestatuas.stockx.criteria.*;
+import java.util.List;
 
 
 public class Stockx {
@@ -32,6 +33,11 @@ public class Stockx {
         Criteria asks = new Asks();
         System.out.println("\n\t\t All ASKS");
         asks.checkCriteria(sneaker).forEach(System.out::print);
+
+        Criteria maxBid = new MaxBid();
+        List<Offer> maximum = maxBid.checkCriteria(sneaker);
+        sneaker.setBid(maximum.isEmpty()? 0 : maximum.get(0).value());
+        System.out.println(Stockx.draw(sneaker));
     }
 
     public static String draw(Item sneaker) {
