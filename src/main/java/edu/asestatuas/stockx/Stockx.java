@@ -44,6 +44,13 @@ public class Stockx {
         sneaker.setAsk(minimum.isEmpty()? 0 : minimum.get(0).value());
         System.out.println(Stockx.draw(sneaker));
 
+        Sale sale = new Sale("6", 356);
+        sneaker.add(sale);
+        sneaker.add(new Sale("9.5", 352));
+        sneaker.add(new Sale("9.5", 404));
+        sneaker.add(new Sale("13", 360));
+        sneaker.add(new Sale("13", 372));
+
     }
 
     public static String draw(Item sneaker) {
