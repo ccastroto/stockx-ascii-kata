@@ -22,7 +22,7 @@ public class BidsTest {
         List<Offer> filteredBids = bids.checkCriteria(sneaker);
         assertTrue(filteredBids.stream().allMatch(b -> b instanceof Bid));
 
-        Optional<Offer> maxOpt = Optional.ofNullable(bids.checkCriteria(sneaker).get(2));
+        Optional<Offer> maxOpt = Optional.ofNullable(bids.checkCriteria(sneaker).get(0));
         sneaker.setBid(maxOpt.isPresent()? maxOpt.get().value() : 0);
         assertEquals(900, sneaker.getBid());
     }
@@ -43,7 +43,7 @@ public class BidsTest {
         List<Offer> filteredBids = bids.checkCriteria(sneaker);
         assertTrue(filteredBids.stream().allMatch(b -> b instanceof Bid));
 
-        Optional<Offer> maxOpt = Optional.ofNullable(bids.checkCriteria(sneaker).get(2));
+        Optional<Offer> maxOpt = Optional.ofNullable(bids.checkCriteria(sneaker).get(0));
         sneaker.setBid(maxOpt.isPresent()? maxOpt.get().value() : 0);
         assertEquals(900, sneaker.getBid());
     }

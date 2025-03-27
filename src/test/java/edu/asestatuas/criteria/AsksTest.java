@@ -24,7 +24,7 @@ public class AsksTest {
         List<Offer> filteredBids = asks.checkCriteria(sneaker);
         assertTrue(filteredBids.stream().allMatch(a -> a instanceof Ask));
 
-        sneaker.setAsk(asks.checkCriteria(sneaker).get(2).value());
+        sneaker.setAsk(asks.checkCriteria(sneaker).get(0).value());
         assertEquals(288, sneaker.getAsk());
     }
 

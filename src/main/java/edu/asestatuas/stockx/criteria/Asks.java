@@ -4,6 +4,7 @@ import edu.asestatuas.stockx.item.Ask;
 import edu.asestatuas.stockx.item.Item;
 import edu.asestatuas.stockx.item.Offer;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -14,6 +15,7 @@ public class Asks implements Criteria{
         return sneaker.offers()
                 .stream()
                 .filter(a -> a instanceof Ask)
+                .sorted()
                 .collect(Collectors.toList());
     }
 }
