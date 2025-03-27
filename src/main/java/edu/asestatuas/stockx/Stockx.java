@@ -38,6 +38,12 @@ public class Stockx {
         List<Offer> maximum = maxBid.checkCriteria(sneaker);
         sneaker.setBid(maximum.isEmpty()? 0 : maximum.get(0).value());
         System.out.println(Stockx.draw(sneaker));
+
+        Criteria minAsk = new MinAsk();
+        List<Offer> minimum = minAsk.checkCriteria(sneaker);
+        sneaker.setAsk(minimum.isEmpty()? 0 : minimum.get(0).value());
+        System.out.println(Stockx.draw(sneaker));
+
     }
 
     public static String draw(Item sneaker) {
