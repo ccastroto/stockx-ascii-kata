@@ -1,6 +1,6 @@
 package edu.asestatuas.stockx.item;
 
-public class Sale {
+public class Sale implements Offer{
 
     private String size;
     private Integer price;
@@ -16,13 +16,13 @@ public class Sale {
         return price;
     }
 
-    public int compareTo(Offer price){
-        return this.price.compareTo(price.value());
+    @Override
+    public int compareTo(Offer sale){
+        return this.price.compareTo(sale.value());
     }
 
-    @Override
     public String toString() {
-        return  this.size  +'\t'+'\t' + this.price + '\n' +'\t'+'\t';
+        return "\t\t" + this.size + '\t' + '\t' + this.price + '\n';
     }
 
 }

@@ -32,7 +32,7 @@ public class Sneaker implements Item {
         return this.sale;
     }
     public void setSale(){
-        this.sale= sale + 1;
+        this.sale= sale;
     }
     @Override
     public int getAsk(){
