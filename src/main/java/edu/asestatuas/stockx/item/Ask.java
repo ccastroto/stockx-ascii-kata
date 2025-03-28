@@ -27,6 +27,6 @@ public class Ask implements Offer{
     }
 
     public String toString(){
-        return this.size + " " + this.ask;
+        return "\t\t" + this.size + '\t' + '\t' + this.ask + '\n';
     }
 }

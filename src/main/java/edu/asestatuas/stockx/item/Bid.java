@@ -24,7 +24,7 @@ public class Bid implements Offer{
     }
 
     public String toString() {
-        return  this.size  +'\t'+'\t' + this.bid + '\n' +'\t'+'\t';
+        return "\t\t" + this.size + '\t' + '\t' + this.bid + '\n';
     }
 
 }
