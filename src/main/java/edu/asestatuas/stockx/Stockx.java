@@ -51,6 +51,10 @@ public class Stockx {
         sneaker.add(new Sale("13", 360));
         sneaker.add(new Sale("13", 372));
 
+        Criteria sales = new Sales();
+        System.out.println("\n\t\t All SALES");
+        sales.checkCriteria(sneaker).forEach(System.out::print);
+
     }
 
     public static String draw(Item sneaker) {
