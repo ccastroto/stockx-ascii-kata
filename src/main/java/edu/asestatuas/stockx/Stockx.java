@@ -55,6 +55,12 @@ public class Stockx {
         System.out.println("\n\t\t All SALES");
         sales.checkCriteria(sneaker).forEach(System.out::print);
 
+        Criteria lastSale = new LastSale();
+
+        List<Offer> actualSale = lastSale.checkCriteria(sneaker);
+        sneaker.setSale(actualSale.isEmpty()? 0 : actualSale.get(0).value());
+        System.out.println(Stockx.draw(sneaker));
+
     }
 
     public static String draw(Item sneaker) {

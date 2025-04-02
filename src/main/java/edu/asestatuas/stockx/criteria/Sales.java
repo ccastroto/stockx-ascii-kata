@@ -15,7 +15,6 @@ public class Sales implements Criteria{
         return sneaker.offers()
                 .stream()
                 .filter(o -> o instanceof Sale)
-                .sorted(Comparator.reverseOrder())
                 .collect(Collectors.toList());
     }
 }
